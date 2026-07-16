@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Servizi — Sistema Spedizioni</title>
+<title data-i18n="title.services">Servizi — Sistema Spedizioni</title>
 <meta name="description" content="Sea Freight, Air Freight, Road Transport, Rail Freight, Project Cargo e Logistic Solution: tutte le soluzioni di trasporto e logistica di Sistema Spedizioni.">
 <link rel="icon" type="image/png" href="assets/img/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,13 +21,26 @@
       <img src="assets/img/logo-white.png" alt="Sistema Spedizioni">
     </a>
     <nav class="nav__links">
-      <a href="index.html">Home</a>
-      <a href="chi-siamo.html">Chi siamo</a>
-      <a href="servizi.html" class="is-active">Servizi</a>
-      <a href="contatti.html">Contatti</a>
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <a href="chi-siamo.html" data-i18n="nav.about">Chi siamo</a>
+      <a href="servizi.html" class="is-active" data-i18n="nav.services">Servizi</a>
+      <a href="contatti.html" data-i18n="nav.contact">Contatti</a>
     </nav>
+    <div class="lang">
+      <button class="lang__btn" aria-label="Lingua / Language">
+        <span class="code-current">IT</span>
+        <svg width="9" height="9" viewBox="0 0 10 10" fill="none"><path d="M2 3.5L5 6.5L8 3.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="lang__list">
+        <button data-set-lang="it"><span class="code">IT</span>Italiano</button>
+        <button data-set-lang="en"><span class="code">EN</span>English</button>
+        <button data-set-lang="fr"><span class="code">FR</span>Français</button>
+        <button data-set-lang="de"><span class="code">DE</span>Deutsch</button>
+        <button data-set-lang="es"><span class="code">ES</span>Español</button>
+      </div>
+    </div>
     <a class="nav__cta" href="contatti.html#quotazione">
-      Richiedi quotazione
+      <span data-i18n="nav.quote">Richiedi quotazione</span>
       <span class="ico">
         <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 10L10 2M10 2H4M10 2V8" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </span>
@@ -38,16 +51,23 @@
 
 <div class="menu">
   <nav>
-    <a href="index.html"><span>Home</span></a>
-    <a href="chi-siamo.html"><span>Chi siamo</span></a>
-    <a href="servizi.html"><span>Servizi</span></a>
-    <a href="contatti.html"><span>Contatti</span></a>
-    <a href="contatti.html#quotazione"><span>Richiedi quotazione</span></a>
+    <a href="index.html"><span data-i18n="nav.home">Home</span></a>
+    <a href="chi-siamo.html"><span data-i18n="nav.about">Chi siamo</span></a>
+    <a href="servizi.html"><span data-i18n="nav.services">Servizi</span></a>
+    <a href="contatti.html"><span data-i18n="nav.contact">Contatti</span></a>
+    <a href="contatti.html#quotazione"><span data-i18n="nav.quote">Richiedi quotazione</span></a>
   </nav>
+  <div class="menu__langs">
+    <button data-set-lang="it">IT</button>
+    <button data-set-lang="en">EN</button>
+    <button data-set-lang="fr">FR</button>
+    <button data-set-lang="de">DE</button>
+    <button data-set-lang="es">ES</button>
+  </div>
   <div class="menu__meta">
     <span>+39 0434 511023</span>
     <span>sistema@sistemaspedizioni.com</span>
-    <span>Pordenone · Italia</span>
+    <span data-i18n="menu.city">Pordenone · Italia</span>
   </div>
 </div>
 
@@ -58,9 +78,9 @@
     <div class="orb orb--blue" style="width:420px;height:420px;bottom:-30%;right:-8%;"></div>
   </div>
   <div class="container">
-    <span class="eyebrow reveal">Servizi</span>
-    <h1 class="display reveal" style="--d:.1s; margin-top:1.4rem;">Ogni rotta, ogni modalità, un unico <em>partner</em>.</h1>
-    <p class="lead reveal" style="--d:.2s;">Mare, cielo, strada e ferrovia: scegli la combinazione più efficace per la tua supply chain, noi pensiamo a tutto il resto.</p>
+    <span class="eyebrow reveal" data-i18n="srv.eyebrow">Servizi</span>
+    <h1 class="display reveal" style="--d:.1s; margin-top:1.4rem;" data-i18n-html="srv.title">Ogni rotta, ogni modalità, un unico <em>partner</em>.</h1>
+    <p class="lead reveal" style="--d:.2s;" data-i18n="srv.lead">Mare, cielo, strada e ferrovia: scegli la combinazione più efficace per la tua supply chain, noi pensiamo a tutto il resto.</p>
   </div>
 </section>
 
@@ -73,8 +93,8 @@
     </div>
     <div>
       <span class="eyebrow reveal">01 — Sea Freight</span>
-      <h2 class="h2 reveal" style="--d:.1s; margin-top:1.2rem;">Trasporto marittimo</h2>
-      <p class="lead reveal" style="--d:.2s; margin-top:1.2rem;">Massima flessibilità, massima sicurezza: dalle opzioni FCL e LCL agli special equipment come container open top, flat rack e reefer. Siamo pronti a soddisfare ogni esigenza di trasporto con soluzioni su misura.</p>
+      <h2 class="h2 reveal" style="--d:.1s; margin-top:1.2rem;" data-i18n="svc.sea.t">Trasporto marittimo</h2>
+      <p class="lead reveal" style="--d:.2s; margin-top:1.2rem;" data-i18n="srv.sea.d">Massima flessibilità, massima sicurezza: dalle opzioni FCL e LCL agli special equipment come container open top, flat rack e reefer. Siamo pronti a soddisfare ogni esigenza di trasporto con soluzioni su misura.</p>
       <div class="svc-row__tags reveal" style="--d:.3s">
         <span>FCL</span><span>LCL</span><span>Open Top</span><span>Flat Rack</span><span>Reefer</span><span>Break Bulk</span>
       </div>
@@ -87,10 +107,10 @@
     </div>
     <div>
       <span class="eyebrow reveal">02 — Air Freight</span>
-      <h2 class="h2 reveal" style="--d:.1s; margin-top:1.2rem;">Trasporto aereo</h2>
-      <p class="lead reveal" style="--d:.2s; margin-top:1.2rem;">Libera il tuo business dal peso dei confini: con le nostre spedizioni via aerea la tua visione globale diventa realtà ad alta quota. Velocità, affidabilità ed efficienza sono il nostro biglietto per il successo.</p>
+      <h2 class="h2 reveal" style="--d:.1s; margin-top:1.2rem;" data-i18n="svc.air.t">Trasporto aereo</h2>
+      <p class="lead reveal" style="--d:.2s; margin-top:1.2rem;" data-i18n="srv.air.d">Libera il tuo business dal peso dei confini: con le nostre spedizioni via aerea la tua visione globale diventa realtà ad alta quota. Velocità, affidabilità ed efficienza sono il nostro biglietto per il successo.</p>
       <div class="svc-row__tags reveal" style="--d:.3s">
-        <span>Express</span><span>Consolidato</span><span>Charter</span><span>Door-to-door</span>
+        <span>Express</span><span data-i18n="srv.tag.consol">Consolidato</span><span>Charter</span><span>Door-to-door</span>
       </div>
     </div>
   </div>
@@ -101,10 +121,10 @@
     </div>
     <div>
       <span class="eyebrow reveal">03 — Road Transport</span>
-      <h2 class="h2 reveal" style="--d:.1s; margin-top:1.2rem;">Trasporto su strada</h2>
-      <p class="lead reveal" style="--d:.2s; margin-top:1.2rem;">Il tuo partner di fiducia nel trasporto su strada: soluzioni su misura dall'FTL all'LTL, con servizi dedicati espressi. Con precisione e dedizione trasformiamo ogni spedizione in un viaggio verso il successo.</p>
+      <h2 class="h2 reveal" style="--d:.1s; margin-top:1.2rem;" data-i18n="svc.road.t">Trasporto su strada</h2>
+      <p class="lead reveal" style="--d:.2s; margin-top:1.2rem;" data-i18n="srv.road.d">Il tuo partner di fiducia nel trasporto su strada: soluzioni su misura dall'FTL all'LTL, con servizi dedicati espressi. Con precisione e dedizione trasformiamo ogni spedizione in un viaggio verso il successo.</p>
       <div class="svc-row__tags reveal" style="--d:.3s">
-        <span>FTL</span><span>LTL</span><span>Espresso dedicato</span><span>ADR</span><span>Groupage</span>
+        <span>FTL</span><span>LTL</span><span data-i18n="srv.tag.express">Espresso dedicato</span><span>ADR</span><span>Groupage</span>
       </div>
     </div>
   </div>
@@ -115,10 +135,10 @@
     </div>
     <div>
       <span class="eyebrow reveal">04 — Rail Freight</span>
-      <h2 class="h2 reveal" style="--d:.1s; margin-top:1.2rem;">Trasporto ferroviario</h2>
-      <p class="lead reveal" style="--d:.2s; margin-top:1.2rem;">Il servizio ferroviario per l'importazione dalla Cina è una soluzione rapida, affidabile ed efficiente. Con la rete sino-europea offriamo un'alternativa competitiva al mare e all'aereo, riducendo significativamente i tempi di consegna.</p>
+      <h2 class="h2 reveal" style="--d:.1s; margin-top:1.2rem;" data-i18n="svc.rail.t">Trasporto ferroviario</h2>
+      <p class="lead reveal" style="--d:.2s; margin-top:1.2rem;" data-i18n="srv.rail.d">Il servizio ferroviario per l'importazione dalla Cina è una soluzione rapida, affidabile ed efficiente. Con la rete sino-europea offriamo un'alternativa competitiva al mare e all'aereo, riducendo significativamente i tempi di consegna.</p>
       <div class="svc-row__tags reveal" style="--d:.3s">
-        <span>Cina–Europa</span><span>Intermodale</span><span>Tempi ridotti</span><span>Basse emissioni</span>
+        <span data-i18n="srv.tag.china">Cina–Europa</span><span data-i18n="srv.tag.inter">Intermodale</span><span data-i18n="srv.tag.time">Tempi ridotti</span><span data-i18n="srv.tag.co2">Basse emissioni</span>
       </div>
     </div>
   </div>
@@ -129,10 +149,10 @@
     </div>
     <div>
       <span class="eyebrow reveal">05 — Project Cargo</span>
-      <h2 class="h2 reveal" style="--d:.1s; margin-top:1.2rem;">Project Cargo</h2>
-      <p class="lead reveal" style="--d:.2s; margin-top:1.2rem;">Raggiungi nuove frontiere: soluzioni personalizzate per ogni sfida, dai carichi eccezionali agli impianti industriali completi. Scegli la nostra esperienza per guidarti attraverso i progetti più impegnativi, con precisione e affidabilità.</p>
+      <h2 class="h2 reveal" style="--d:.1s; margin-top:1.2rem;" data-i18n="svc.cargo.t">Project Cargo</h2>
+      <p class="lead reveal" style="--d:.2s; margin-top:1.2rem;" data-i18n="srv.cargo.d">Raggiungi nuove frontiere: soluzioni personalizzate per ogni sfida, dai carichi eccezionali agli impianti industriali completi. Scegli la nostra esperienza per guidarti attraverso i progetti più impegnativi, con precisione e affidabilità.</p>
       <div class="svc-row__tags reveal" style="--d:.3s">
-        <span>Carichi eccezionali</span><span>Heavy lift</span><span>Chiavi in mano</span><span>Studi di fattibilità</span>
+        <span data-i18n="srv.tag.oversize">Carichi eccezionali</span><span>Heavy lift</span><span data-i18n="srv.tag.turnkey">Chiavi in mano</span><span data-i18n="srv.tag.feasib">Studi di fattibilità</span>
       </div>
     </div>
   </div>
@@ -143,10 +163,10 @@
     </div>
     <div>
       <span class="eyebrow reveal">06 — Logistic Solution</span>
-      <h2 class="h2 reveal" style="--d:.1s; margin-top:1.2rem;">Logistica integrata</h2>
-      <p class="lead reveal" style="--d:.2s; margin-top:1.2rem;">Abbina la tua visione imprenditoriale alla nostra logistica integrata: magazzinaggio, outsourcing, pianificazione e sdoganamento. Trasformiamo la complessità in semplicità e ogni movimento in un passo sicuro verso il successo aziendale.</p>
+      <h2 class="h2 reveal" style="--d:.1s; margin-top:1.2rem;" data-i18n="svc.log.t">Logistica integrata</h2>
+      <p class="lead reveal" style="--d:.2s; margin-top:1.2rem;" data-i18n="srv.log.d">Abbina la tua visione imprenditoriale alla nostra logistica integrata: magazzinaggio, outsourcing, pianificazione e sdoganamento. Trasformiamo la complessità in semplicità e ogni movimento in un passo sicuro verso il successo aziendale.</p>
       <div class="svc-row__tags reveal" style="--d:.3s">
-        <span>Magazzinaggio</span><span>Sdoganamento</span><span>Outsourcing</span><span>Supply chain</span>
+        <span data-i18n="srv.tag.wh">Magazzinaggio</span><span data-i18n="srv.tag.customs">Sdoganamento</span><span>Outsourcing</span><span>Supply chain</span>
       </div>
     </div>
   </div>
@@ -160,12 +180,12 @@
       <div class="orb-field">
         <div class="orb orb--amber" style="width:420px;height:420px;top:-40%;left:30%;"></div>
       </div>
-      <span class="eyebrow">Preventivo gratuito</span>
-      <h2 class="display" style="font-size:clamp(2.2rem,5vw,4rem); margin-top:1.4rem;">Non sai quale soluzione fa per <em>te</em>?</h2>
-      <p class="lead" style="margin-top:1rem;">Descrivici la tua spedizione: un nostro specialista ti proporrà la combinazione più efficiente.</p>
+      <span class="eyebrow" data-i18n="srv.cta.eyebrow">Preventivo gratuito</span>
+      <h2 class="display" style="font-size:clamp(2.2rem,5vw,4rem); margin-top:1.4rem;" data-i18n-html="srv.cta.title">Non sai quale soluzione fa per <em>te</em>?</h2>
+      <p class="lead" style="margin-top:1rem;" data-i18n="srv.cta.lead">Descrivici la tua spedizione: un nostro specialista ti proporrà la combinazione più efficiente.</p>
       <div class="cta-banner__actions" style="margin-top:2.4rem;">
         <a class="btn btn--solid" href="contatti.html#quotazione">
-          Richiedi una quotazione
+          <span data-i18n="cta.btn">Richiedi una quotazione</span>
           <span class="ico"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 10L10 2M10 2H4M10 2V8" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         </a>
       </div>
@@ -179,18 +199,26 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <img src="assets/img/logo-white.png" alt="Sistema Spedizioni">
-        <p>Spedizioni internazionali e logistica integrata da oltre 40 anni. Pordenone, Italia.</p>
+        <p data-i18n="footer.tagline">Spedizioni internazionali e logistica integrata da oltre 40 anni. Pordenone, Italia.</p>
+        <div class="socials">
+          <a href="https://www.facebook.com/SistemaSpedizioni" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M10.5 2.5H9C7.6 2.5 6.5 3.6 6.5 5V6.5H4.5V9H6.5V14H9V9H11L11.5 6.5H9V5C9 4.7 9.2 4.5 9.5 4.5H10.5V2.5Z" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="https://www.youtube.com/watch?v=voI3pTee-ns" target="_blank" rel="noopener" aria-label="YouTube">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="1.5" y="4" width="13" height="8.5" rx="2.4" stroke="currentColor" stroke-width="1.1"/><path d="M6.8 6.5L10 8.25L6.8 10V6.5Z" fill="currentColor"/></svg>
+          </a>
+        </div>
       </div>
       <div class="footer-col">
-        <h4>Azienda</h4>
+        <h4 data-i18n="footer.company">Azienda</h4>
         <ul>
-          <li><a href="chi-siamo.html">Chi siamo</a></li>
-          <li><a href="chi-siamo.html#ambiente">Impegno ambientale</a></li>
-          <li><a href="contatti.html">Contatti</a></li>
+          <li><a href="chi-siamo.html" data-i18n="nav.about">Chi siamo</a></li>
+          <li><a href="chi-siamo.html#ambiente" data-i18n="footer.env">Impegno ambientale</a></li>
+          <li><a href="contatti.html" data-i18n="nav.contact">Contatti</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Servizi</h4>
+        <h4 data-i18n="footer.servicesT">Servizi</h4>
         <ul>
           <li><a href="servizi.html#sea">Sea Freight</a></li>
           <li><a href="servizi.html#air">Air Freight</a></li>
@@ -201,7 +229,7 @@
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Contatti</h4>
+        <h4 data-i18n="footer.contactsT">Contatti</h4>
         <ul>
           <li><a href="tel:+390434511023">+39 0434 511023</a></li>
           <li><a href="mailto:sistema@sistemaspedizioni.com">sistema@sistemaspedizioni.com</a></li>
@@ -210,12 +238,13 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 Sistema Spedizioni — Tutti i diritti riservati</span>
+      <span data-i18n="footer.rights">© 2026 Sistema Spedizioni — Tutti i diritti riservati</span>
       <span>P.IVA e C.F. 01469330938</span>
     </div>
   </div>
 </footer>
 
+<script src="assets/js/i18n.js"></script>
 <script src="assets/js/main.js"></script>
 </body>
 </html>
