@@ -244,7 +244,14 @@
     "job.r4.t": "Operativo Export via mare — Senior",
     "job.r4.d": "Gestisce le spedizioni internazionali via mare dall'origine alla destinazione: pianificazione, documentazione export e coordinamento degli stakeholder nel rispetto delle normative internazionali.",
     "job.cta.title": "Non trovi il ruolo giusto per <em>te</em>?",
-    "job.cta.lead": "Inviaci una candidatura spontanea: cerchiamo sempre persone che condividano la nostra passione per la logistica."
+    "job.cta.lead": "Inviaci una candidatura spontanea: cerchiamo sempre persone che condividano la nostra passione per la logistica.",
+    "mail.title": "Scegli come inviare l'email",
+    "mail.gmail": "Apri in Gmail",
+    "mail.outlook": "Apri in Outlook Web",
+    "mail.app": "App di posta del dispositivo",
+    "mail.copy": "Copia email e messaggio",
+    "mail.copied": "Copiato negli appunti!",
+    "mail.close": "Chiudi"
   },
 
   /* ══════════════════ ENGLISH ══════════════════ */
@@ -482,7 +489,14 @@
     "job.r4.t": "Sea Export Operations — Senior",
     "job.r4.d": "Manages international sea shipments from origin to destination: planning, export documentation and stakeholder coordination in compliance with international regulations.",
     "job.cta.title": "Can't find the right role for <em>you</em>?",
-    "job.cta.lead": "Send us a spontaneous application: we are always looking for people who share our passion for logistics."
+    "job.cta.lead": "Send us a spontaneous application: we are always looking for people who share our passion for logistics.",
+    "mail.title": "Choose how to send the email",
+    "mail.gmail": "Open in Gmail",
+    "mail.outlook": "Open in Outlook Web",
+    "mail.app": "Device mail app",
+    "mail.copy": "Copy email & message",
+    "mail.copied": "Copied to clipboard!",
+    "mail.close": "Close"
   },
 
   /* ══════════════════ FRANÇAIS ══════════════════ */
@@ -720,7 +734,14 @@
     "job.r4.t": "Opérations Export maritime — Senior",
     "job.r4.d": "Gère les expéditions maritimes internationales de l'origine à la destination : planification, documentation export et coordination des parties prenantes dans le respect des réglementations internationales.",
     "job.cta.title": "Vous ne trouvez pas le rôle fait pour <em>vous</em> ?",
-    "job.cta.lead": "Envoyez-nous une candidature spontanée : nous recherchons toujours des personnes qui partagent notre passion pour la logistique."
+    "job.cta.lead": "Envoyez-nous une candidature spontanée : nous recherchons toujours des personnes qui partagent notre passion pour la logistique.",
+    "mail.title": "Choisissez comment envoyer l'e-mail",
+    "mail.gmail": "Ouvrir dans Gmail",
+    "mail.outlook": "Ouvrir dans Outlook Web",
+    "mail.app": "Application de messagerie de l'appareil",
+    "mail.copy": "Copier l'e-mail et le message",
+    "mail.copied": "Copié dans le presse-papiers !",
+    "mail.close": "Fermer"
   },
 
   /* ══════════════════ DEUTSCH ══════════════════ */
@@ -958,7 +979,14 @@
     "job.r4.t": "Seefracht Export Operations — Senior",
     "job.r4.d": "Verantwortet internationale Seefrachtsendungen von der Herkunft bis zum Ziel: Planung, Exportdokumentation und Koordination der Beteiligten gemäß internationalen Vorschriften.",
     "job.cta.title": "Nicht die richtige Rolle für <em>Sie</em> dabei?",
-    "job.cta.lead": "Senden Sie uns eine Initiativbewerbung: Wir suchen immer Menschen, die unsere Leidenschaft für Logistik teilen."
+    "job.cta.lead": "Senden Sie uns eine Initiativbewerbung: Wir suchen immer Menschen, die unsere Leidenschaft für Logistik teilen.",
+    "mail.title": "Wählen Sie, wie Sie die E-Mail senden möchten",
+    "mail.gmail": "In Gmail öffnen",
+    "mail.outlook": "In Outlook Web öffnen",
+    "mail.app": "Mail-App des Geräts",
+    "mail.copy": "E-Mail & Nachricht kopieren",
+    "mail.copied": "In die Zwischenablage kopiert!",
+    "mail.close": "Schließen"
   },
 
   /* ══════════════════ ESPAÑOL ══════════════════ */
@@ -1196,7 +1224,14 @@
     "job.r4.t": "Operativo Export marítimo — Senior",
     "job.r4.d": "Gestiona los envíos marítimos internacionales del origen al destino: planificación, documentación de exportación y coordinación de las partes implicadas conforme a la normativa internacional.",
     "job.cta.title": "¿No encuentras el puesto adecuado para <em>ti</em>?",
-    "job.cta.lead": "Envíanos una candidatura espontánea: siempre buscamos personas que compartan nuestra pasión por la logística."
+    "job.cta.lead": "Envíanos una candidatura espontánea: siempre buscamos personas que compartan nuestra pasión por la logística.",
+    "mail.title": "Elige cómo enviar el correo",
+    "mail.gmail": "Abrir en Gmail",
+    "mail.outlook": "Abrir en Outlook Web",
+    "mail.app": "App de correo del dispositivo",
+    "mail.copy": "Copiar correo y mensaje",
+    "mail.copied": "¡Copiado al portapapeles!",
+    "mail.close": "Cerrar"
   }
   };
 
@@ -1216,6 +1251,7 @@
   function apply(lang) {
     if (!D[lang]) lang = "en";
     var dict = D[lang];
+    window.SS_LANG = lang;
     document.documentElement.lang = lang;
 
     document.querySelectorAll("[data-i18n]").forEach(function (el) {
@@ -1265,4 +1301,9 @@
 
   apply(detect());
   window.SS_LANGS = LANGS;
+  // translate a single key in the active language (for JS-built UI)
+  window.SS_T = function (k) {
+    var d = D[window.SS_LANG] || D.it;
+    return d[k] != null ? d[k] : (D.it[k] != null ? D.it[k] : k);
+  };
 })();
