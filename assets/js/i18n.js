@@ -62,6 +62,10 @@
 
     "sect.eyebrow": "Settori",
     "sect.title": "Qualunque sia il tuo settore, siamo il tuo spedizioniere globale.",
+    "sect.s1": "Aerospaziale", "sect.s2": "Automotive", "sect.s3": "Materiali da costruzione",
+    "sect.s4": "Chimico", "sect.s5": "Dry Dock & Navi da crociera", "sect.s6": "Ingegneria & Macchinari",
+    "sect.s7": "Food & Beverage", "sect.s8": "Mangimi & Animali vivi", "sect.s9": "Lusso & Moda",
+    "sect.s10": "Farmaceutico & Sanità", "sect.s11": "Progetti",
     "sect.last": "E molti altri",
 
     "rev.eyebrow": "Dicono di noi",
@@ -225,6 +229,10 @@
 
     "sect.eyebrow": "Industries",
     "sect.title": "Whatever your industry, we are your global freight forwarder.",
+    "sect.s1": "Aerospace", "sect.s2": "Automotive", "sect.s3": "Building Materials",
+    "sect.s4": "Chemicals", "sect.s5": "Dry Dock & Cruise Vessels", "sect.s6": "Engineering & Machinery",
+    "sect.s7": "Food & Beverage", "sect.s8": "Animal Food & Live Animals", "sect.s9": "Luxury & Fashion",
+    "sect.s10": "Pharma & Healthcare", "sect.s11": "Projects",
     "sect.last": "And many more",
 
     "rev.eyebrow": "What clients say",
@@ -388,6 +396,10 @@
 
     "sect.eyebrow": "Secteurs",
     "sect.title": "Quel que soit votre secteur, nous sommes votre transitaire mondial.",
+    "sect.s1": "Aérospatiale", "sect.s2": "Automobile", "sect.s3": "Matériaux de construction",
+    "sect.s4": "Chimie", "sect.s5": "Cale sèche & Navires de croisière", "sect.s6": "Ingénierie & Machines",
+    "sect.s7": "Agroalimentaire", "sect.s8": "Aliments pour animaux & Animaux vivants", "sect.s9": "Luxe & Mode",
+    "sect.s10": "Pharma & Santé", "sect.s11": "Projets",
     "sect.last": "Et bien d'autres",
 
     "rev.eyebrow": "Ils parlent de nous",
@@ -551,6 +563,10 @@
 
     "sect.eyebrow": "Branchen",
     "sect.title": "Was auch immer Ihre Branche ist — wir sind Ihr globaler Spediteur.",
+    "sect.s1": "Luft- und Raumfahrt", "sect.s2": "Automobil", "sect.s3": "Baustoffe",
+    "sect.s4": "Chemie", "sect.s5": "Trockendock & Kreuzfahrtschiffe", "sect.s6": "Maschinenbau & Anlagen",
+    "sect.s7": "Lebensmittel & Getränke", "sect.s8": "Futtermittel & Lebendtiere", "sect.s9": "Luxus & Mode",
+    "sect.s10": "Pharma & Gesundheit", "sect.s11": "Projekte",
     "sect.last": "Und viele mehr",
 
     "rev.eyebrow": "Kundenstimmen",
@@ -714,6 +730,10 @@
 
     "sect.eyebrow": "Sectores",
     "sect.title": "Sea cual sea tu sector, somos tu transitario global.",
+    "sect.s1": "Aeroespacial", "sect.s2": "Automoción", "sect.s3": "Materiales de construcción",
+    "sect.s4": "Química", "sect.s5": "Dique seco & Cruceros", "sect.s6": "Ingeniería & Maquinaria",
+    "sect.s7": "Alimentación & Bebidas", "sect.s8": "Piensos & Animales vivos", "sect.s9": "Lujo & Moda",
+    "sect.s10": "Farma & Salud", "sect.s11": "Proyectos",
     "sect.last": "Y muchos más",
 
     "rev.eyebrow": "Hablan de nosotros",

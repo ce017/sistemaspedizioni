@@ -46,7 +46,7 @@
       if (!start) start = ts;
       var p = Math.min((ts - start) / dur, 1);
       var val = target * ease(p);
-      el.textContent = val.toLocaleString("it-IT", {
+      el.textContent = val.toLocaleString(document.documentElement.lang || "it", {
         minimumFractionDigits: decimals,
         maximumFractionDigits: decimals
       });
@@ -70,8 +70,34 @@
     counters.forEach(function (el) { cio.observe(el); });
   } else {
     counters.forEach(function (el) {
-      el.textContent = parseFloat(el.dataset.count).toLocaleString("it-IT");
+      el.textContent = parseFloat(el.dataset.count).toLocaleString(document.documentElement.lang || "it");
     });
+  }
+
+  /* ---------- reviews carousel ---------- */
+  var track = document.querySelector(".reviews__track");
+  if (track) {
+    var step = function () {
+      var card = track.querySelector(".review");
+      return card ? card.getBoundingClientRect().width + 16 : 420;
+    };
+    var prev = document.querySelector("[data-rev-prev]");
+    var next = document.querySelector("[data-rev-next]");
+    var go = function (dir) {
+      var max = track.scrollWidth - track.clientWidth;
+      var target = track.scrollLeft + dir * step();
+      if (dir > 0 && target > max + 8) target = 0;
+      if (dir < 0 && target < -8) target = max;
+      track.scrollTo({ left: target, behavior: "smooth" });
+    };
+    if (prev) prev.addEventListener("click", function () { go(-1); });
+    if (next) next.addEventListener("click", function () { go(1); });
+
+    var auto = setInterval(function () { go(1); }, 6000);
+    var stopAuto = function () { clearInterval(auto); };
+    track.addEventListener("pointerdown", stopAuto, { once: true });
+    if (prev) prev.addEventListener("click", stopAuto, { once: true });
+    if (next) next.addEventListener("click", stopAuto, { once: true });
   }
 
   /* ---------- quote form → mailto ---------- */

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Chi siamo — Sistema Spedizioni</title>
+<title data-i18n="title.about">Chi siamo — Sistema Spedizioni</title>
 <meta name="description" content="Oltre 40 anni di esperienza nella logistica internazionale: 35 specialisti interni, 1700+ partner certificati e un unico interlocutore dal preventivo alla consegna.">
 <link rel="icon" type="image/png" href="assets/img/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,13 +21,26 @@
       <img src="assets/img/logo-white.png" alt="Sistema Spedizioni">
     </a>
     <nav class="nav__links">
-      <a href="index.html">Home</a>
-      <a href="chi-siamo.html" class="is-active">Chi siamo</a>
-      <a href="servizi.html">Servizi</a>
-      <a href="contatti.html">Contatti</a>
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <a href="chi-siamo.html" class="is-active" data-i18n="nav.about">Chi siamo</a>
+      <a href="servizi.html" data-i18n="nav.services">Servizi</a>
+      <a href="contatti.html" data-i18n="nav.contact">Contatti</a>
     </nav>
+    <div class="lang">
+      <button class="lang__btn" aria-label="Lingua / Language">
+        <span class="code-current">IT</span>
+        <svg width="9" height="9" viewBox="0 0 10 10" fill="none"><path d="M2 3.5L5 6.5L8 3.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="lang__list">
+        <button data-set-lang="it"><span class="code">IT</span>Italiano</button>
+        <button data-set-lang="en"><span class="code">EN</span>English</button>
+        <button data-set-lang="fr"><span class="code">FR</span>Français</button>
+        <button data-set-lang="de"><span class="code">DE</span>Deutsch</button>
+        <button data-set-lang="es"><span class="code">ES</span>Español</button>
+      </div>
+    </div>
     <a class="nav__cta" href="contatti.html#quotazione">
-      Richiedi quotazione
+      <span data-i18n="nav.quote">Richiedi quotazione</span>
       <span class="ico">
         <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 10L10 2M10 2H4M10 2V8" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </span>
@@ -38,16 +51,23 @@
 
 <div class="menu">
   <nav>
-    <a href="index.html"><span>Home</span></a>
-    <a href="chi-siamo.html"><span>Chi siamo</span></a>
-    <a href="servizi.html"><span>Servizi</span></a>
-    <a href="contatti.html"><span>Contatti</span></a>
-    <a href="contatti.html#quotazione"><span>Richiedi quotazione</span></a>
+    <a href="index.html"><span data-i18n="nav.home">Home</span></a>
+    <a href="chi-siamo.html"><span data-i18n="nav.about">Chi siamo</span></a>
+    <a href="servizi.html"><span data-i18n="nav.services">Servizi</span></a>
+    <a href="contatti.html"><span data-i18n="nav.contact">Contatti</span></a>
+    <a href="contatti.html#quotazione"><span data-i18n="nav.quote">Richiedi quotazione</span></a>
   </nav>
+  <div class="menu__langs">
+    <button data-set-lang="it">IT</button>
+    <button data-set-lang="en">EN</button>
+    <button data-set-lang="fr">FR</button>
+    <button data-set-lang="de">DE</button>
+    <button data-set-lang="es">ES</button>
+  </div>
   <div class="menu__meta">
     <span>+39 0434 511023</span>
     <span>sistema@sistemaspedizioni.com</span>
-    <span>Pordenone · Italia</span>
+    <span data-i18n="menu.city">Pordenone · Italia</span>
   </div>
 </div>
 
@@ -58,9 +78,9 @@
     <div class="orb orb--blue" style="width:420px;height:420px;bottom:-30%;left:-8%;"></div>
   </div>
   <div class="container">
-    <span class="eyebrow reveal">Chi siamo</span>
-    <h1 class="display reveal" style="--d:.1s; margin-top:1.4rem;">Oltre 40 anni al servizio della tua <em>competitività</em>.</h1>
-    <p class="lead reveal" style="--d:.2s;">In un'epoca in cui il prodotto viene scelto anche per la velocità con cui viene consegnato, Sistema Spedizioni offre soluzioni di trasporto e logistica efficaci e performanti, pensate ad hoc per ogni esigenza.</p>
+    <span class="eyebrow reveal" data-i18n="chi.eyebrow">Chi siamo</span>
+    <h1 class="display reveal" style="--d:.1s; margin-top:1.4rem;" data-i18n-html="chi.title">Oltre 40 anni al servizio della tua <em>competitività</em>.</h1>
+    <p class="lead reveal" style="--d:.2s;" data-i18n="chi.lead">In un'epoca in cui il prodotto viene scelto anche per la velocità con cui viene consegnato, Sistema Spedizioni offre soluzioni di trasporto e logistica efficaci e performanti, pensate ad hoc per ogni esigenza.</p>
   </div>
 </section>
 
@@ -68,21 +88,21 @@
 <section style="padding-top:2rem;">
   <div class="container split">
     <div>
-      <span class="eyebrow reveal">La nostra forza</span>
-      <h2 class="h2 reveal" style="--d:.1s; margin-top:1.2rem;">Un solo referente, dal preventivo alla consegna.</h2>
-      <p class="lead reveal" style="--d:.2s; margin-top:1.2rem;">Vi garantiamo diverse soluzioni di trasporto fornendovi un unico interlocutore che vi saprà consigliare al meglio e vi fornirà puntuali aggiornamenti sullo stato della spedizione: un'assistenza a 360°.</p>
+      <span class="eyebrow reveal" data-i18n="chi.s1.eyebrow">La nostra forza</span>
+      <h2 class="h2 reveal" style="--d:.1s; margin-top:1.2rem;" data-i18n="chi.s1.title">Un solo referente, dal preventivo alla consegna.</h2>
+      <p class="lead reveal" style="--d:.2s; margin-top:1.2rem;" data-i18n="chi.s1.lead">Vi garantiamo diverse soluzioni di trasporto fornendovi un unico interlocutore che vi saprà consigliare al meglio e vi fornirà puntuali aggiornamenti sullo stato della spedizione: un'assistenza a 360°.</p>
       <ul class="split__list">
         <li class="reveal" style="--d:.1s">
           <span class="dot">01</span>
-          <div><strong>35 specialisti interni</strong><p>Un team altamente qualificato che analizza le vostre richieste e propone la soluzione più adatta in tempi brevissimi.</p></div>
+          <div><strong data-i18n="chi.f1t">35 specialisti interni</strong><p data-i18n="chi.f1d">Un team altamente qualificato che analizza le vostre richieste e propone la soluzione più adatta in tempi brevissimi.</p></div>
         </li>
         <li class="reveal" style="--d:.2s">
           <span class="dot">02</span>
-          <div><strong>1700+ partner certificati</strong><p>Una rete globale costruita negli anni, che rispetta i più severi requisiti di puntualità, precisione e sicurezza.</p></div>
+          <div><strong data-i18n="chi.f2t">1700+ partner certificati</strong><p data-i18n="chi.f2d">Una rete globale costruita negli anni, che rispetta i più severi requisiti di puntualità, precisione e sicurezza.</p></div>
         </li>
         <li class="reveal" style="--d:.3s">
           <span class="dot">03</span>
-          <div><strong>Numeri in forte crescita</strong><p>Oltre 15.500 spedizioni su gomma, più di 800.000 kg via aerea e oltre 80.000 tonnellate via mare ogni anno.</p></div>
+          <div><strong data-i18n="chi.f3t">Numeri in forte crescita</strong><p data-i18n="chi.f3d">Oltre 15.500 spedizioni su gomma, più di 800.000 kg via aerea e oltre 80.000 tonnellate via mare ogni anno.</p></div>
         </li>
       </ul>
     </div>
@@ -92,7 +112,7 @@
       </div></div>
       <div class="split__badge">
         <strong>1984</strong>
-        <span>una storia che parte da lontano</span>
+        <span data-i18n="chi.badge">una storia che parte da lontano</span>
       </div>
     </div>
   </div>
@@ -104,19 +124,19 @@
     <div class="stats">
       <div class="bezel reveal"><div class="bezel__core stat">
         <div class="stat__num"><span data-count="40">0</span><em>+</em></div>
-        <div class="stat__label">Anni di esperienza</div>
+        <div class="stat__label" data-i18n="num.l1">Anni di esperienza</div>
       </div></div>
       <div class="bezel reveal" style="--d:.1s"><div class="bezel__core stat">
         <div class="stat__num"><span data-count="35">0</span></div>
-        <div class="stat__label">Collaboratori interni</div>
+        <div class="stat__label" data-i18n="chi.n2">Collaboratori interni</div>
       </div></div>
       <div class="bezel reveal" style="--d:.2s"><div class="bezel__core stat">
         <div class="stat__num"><span data-count="800000">0</span><em>kg</em></div>
-        <div class="stat__label">Spedizioni aeree / anno</div>
+        <div class="stat__label" data-i18n="chi.n3">Spedizioni aeree / anno</div>
       </div></div>
       <div class="bezel reveal" style="--d:.3s"><div class="bezel__core stat">
         <div class="stat__num"><span data-count="80000">0</span><em>t</em></div>
-        <div class="stat__label">Spedizioni marittime / anno</div>
+        <div class="stat__label" data-i18n="chi.n4">Spedizioni marittime / anno</div>
       </div></div>
     </div>
   </div>
@@ -131,10 +151,16 @@
       </div></div>
     </div>
     <div>
-      <span class="eyebrow reveal">Partnership</span>
-      <h2 class="h2 reveal" style="--d:.1s; margin-top:1.2rem;">Sistema Spedizioni + Autotrasporti Girelli.</h2>
-      <p class="lead reveal" style="--d:.2s; margin-top:1.2rem;">L'unione con Autotrasporti Girelli Giorgio &amp; Figli S.r.l., nata da una lunga esperienza e da una reciproca fiducia, ci permette di unire forze e competenze per offrire soluzioni ancora più innovative e vantaggiose nella logistica e nei trasporti nazionali e internazionali — via terra, via mare e via aerea.</p>
-      <p class="lead reveal" style="--d:.3s; margin-top:1rem;">Un solo obiettivo: servizi più efficienti e affidabili per i nostri clienti.</p>
+      <span class="eyebrow reveal" data-i18n="chi.g.eyebrow">Partnership</span>
+      <h2 class="h2 reveal" style="--d:.1s; margin-top:1.2rem;" data-i18n="chi.g.title">Sistema Spedizioni + Autotrasporti Girelli.</h2>
+      <p class="lead reveal" style="--d:.2s; margin-top:1.2rem;" data-i18n="chi.g.lead">L'unione con Autotrasporti Girelli Giorgio &amp; Figli S.r.l., nata da una lunga esperienza e da una reciproca fiducia, ci permette di unire forze e competenze per offrire soluzioni ancora più innovative e vantaggiose nella logistica e nei trasporti nazionali e internazionali — via terra, via mare e via aerea.</p>
+      <p class="lead reveal" style="--d:.3s; margin-top:1rem;" data-i18n="chi.g.lead2">Un solo obiettivo: servizi più efficienti e affidabili per i nostri clienti.</p>
+      <div class="reveal" style="--d:.35s; margin-top:2.4rem;">
+        <a class="btn btn--ghost" href="https://www.youtube.com/watch?v=voI3pTee-ns" target="_blank" rel="noopener">
+          <span data-i18n="chi.g.video">Guarda l'intervista su Business24</span>
+          <span class="ico"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 2L10 6L3 10V2Z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg></span>
+        </a>
+      </div>
     </div>
   </div>
 </section>
@@ -143,12 +169,12 @@
 <section id="ambiente">
   <div class="container split">
     <div>
-      <span class="eyebrow reveal">Impegno ambientale</span>
-      <h2 class="h2 reveal" style="--d:.1s; margin-top:1.2rem;">Una logistica che guarda al futuro del pianeta.</h2>
-      <p class="lead reveal" style="--d:.2s; margin-top:1.2rem;">Crediamo in una crescita responsabile: ottimizziamo le rotte, privilegiamo modalità di trasporto a minore impatto come il ferroviario e monitoriamo le emissioni di CO₂ delle spedizioni, per offrire ai nostri clienti una supply chain sempre più sostenibile.</p>
+      <span class="eyebrow reveal" data-i18n="chi.env.eyebrow">Impegno ambientale</span>
+      <h2 class="h2 reveal" style="--d:.1s; margin-top:1.2rem;" data-i18n="chi.env.title">Una logistica che guarda al futuro del pianeta.</h2>
+      <p class="lead reveal" style="--d:.2s; margin-top:1.2rem;" data-i18n="chi.env.lead">Crediamo in una crescita responsabile: ottimizziamo le rotte, privilegiamo modalità di trasporto a minore impatto come il ferroviario e monitoriamo le emissioni di CO₂ delle spedizioni, per offrire ai nostri clienti una supply chain sempre più sostenibile.</p>
       <div class="reveal" style="--d:.3s; margin-top:2.4rem;">
         <a class="btn btn--ghost" href="contatti.html">
-          Parlane con noi
+          <span data-i18n="chi.env.cta">Parlane con noi</span>
           <span class="ico"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 6H11M11 6L6.5 1.5M11 6L6.5 10.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         </a>
       </div>
@@ -168,12 +194,12 @@
       <div class="orb-field">
         <div class="orb orb--amber" style="width:420px;height:420px;top:-40%;left:30%;"></div>
       </div>
-      <span class="eyebrow">Lavora con noi</span>
-      <h2 class="display" style="font-size:clamp(2.2rem,5vw,4rem); margin-top:1.4rem;">Il nostro team è cresciuto con <em>noi</em>.</h2>
-      <p class="lead" style="margin-top:1rem;">Cerchiamo persone che condividano la nostra passione per la logistica. Inviaci la tua candidatura.</p>
+      <span class="eyebrow" data-i18n="chi.cta.eyebrow">Lavora con noi</span>
+      <h2 class="display" style="font-size:clamp(2.2rem,5vw,4rem); margin-top:1.4rem;" data-i18n-html="chi.cta.title">Il nostro team è cresciuto con <em>noi</em>.</h2>
+      <p class="lead" style="margin-top:1rem;" data-i18n="chi.cta.lead">Cerchiamo persone che condividano la nostra passione per la logistica. Inviaci la tua candidatura.</p>
       <div class="cta-banner__actions" style="margin-top:2.4rem;">
         <a class="btn btn--solid" href="mailto:sistema@sistemaspedizioni.com?subject=Candidatura">
-          Invia candidatura
+          <span data-i18n="chi.cta.btn">Invia candidatura</span>
           <span class="ico"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 10L10 2M10 2H4M10 2V8" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         </a>
       </div>
@@ -187,18 +213,26 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <img src="assets/img/logo-white.png" alt="Sistema Spedizioni">
-        <p>Spedizioni internazionali e logistica integrata da oltre 40 anni. Pordenone, Italia.</p>
+        <p data-i18n="footer.tagline">Spedizioni internazionali e logistica integrata da oltre 40 anni. Pordenone, Italia.</p>
+        <div class="socials">
+          <a href="https://www.facebook.com/SistemaSpedizioni" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M10.5 2.5H9C7.6 2.5 6.5 3.6 6.5 5V6.5H4.5V9H6.5V14H9V9H11L11.5 6.5H9V5C9 4.7 9.2 4.5 9.5 4.5H10.5V2.5Z" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="https://www.youtube.com/watch?v=voI3pTee-ns" target="_blank" rel="noopener" aria-label="YouTube">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="1.5" y="4" width="13" height="8.5" rx="2.4" stroke="currentColor" stroke-width="1.1"/><path d="M6.8 6.5L10 8.25L6.8 10V6.5Z" fill="currentColor"/></svg>
+          </a>
+        </div>
       </div>
       <div class="footer-col">
-        <h4>Azienda</h4>
+        <h4 data-i18n="footer.company">Azienda</h4>
         <ul>
-          <li><a href="chi-siamo.html">Chi siamo</a></li>
-          <li><a href="chi-siamo.html#ambiente">Impegno ambientale</a></li>
-          <li><a href="contatti.html">Contatti</a></li>
+          <li><a href="chi-siamo.html" data-i18n="nav.about">Chi siamo</a></li>
+          <li><a href="chi-siamo.html#ambiente" data-i18n="footer.env">Impegno ambientale</a></li>
+          <li><a href="contatti.html" data-i18n="nav.contact">Contatti</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Servizi</h4>
+        <h4 data-i18n="footer.servicesT">Servizi</h4>
         <ul>
           <li><a href="servizi.html#sea">Sea Freight</a></li>
           <li><a href="servizi.html#air">Air Freight</a></li>
@@ -209,7 +243,7 @@
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Contatti</h4>
+        <h4 data-i18n="footer.contactsT">Contatti</h4>
         <ul>
           <li><a href="tel:+390434511023">+39 0434 511023</a></li>
           <li><a href="mailto:sistema@sistemaspedizioni.com">sistema@sistemaspedizioni.com</a></li>
@@ -218,12 +252,13 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 Sistema Spedizioni — Tutti i diritti riservati</span>
+      <span data-i18n="footer.rights">© 2026 Sistema Spedizioni — Tutti i diritti riservati</span>
       <span>P.IVA e C.F. 01469330938</span>
     </div>
   </div>
 </footer>
 
+<script src="assets/js/i18n.js"></script>
 <script src="assets/js/main.js"></script>
 </body>
 </html>

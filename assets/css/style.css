@@ -267,9 +267,9 @@ section { position: relative; padding: clamp(6rem, 10vw, 10rem) 0; }
 /* ---------- reveal animation ---------- */
 .reveal {
   opacity: 0;
-  transform: translateY(56px);
-  filter: blur(8px);
-  transition: opacity 1s var(--ease-out), transform 1s var(--ease-out), filter 1s var(--ease-out);
+  transform: translateY(40px);
+  filter: blur(6px);
+  transition: opacity 0.9s var(--ease-out), transform 0.9s var(--ease-out), filter 0.9s var(--ease-out);
   transition-delay: var(--d, 0s);
 }
 .reveal.is-in { opacity: 1; transform: translateY(0); filter: blur(0); }
@@ -304,6 +304,7 @@ section { position: relative; padding: clamp(6rem, 10vw, 10rem) 0; }
 .hero__bg::after {
   content: ""; position: absolute; inset: 0;
   background:
+    radial-gradient(ellipse 62% 78% at 76% 42%, rgba(4,4,6,0.88) 30%, transparent 75%),
     linear-gradient(to top, var(--bg) 4%, rgba(6,6,7,0.72) 38%, rgba(6,6,7,0.35) 65%, rgba(6,6,7,0.55) 100%);
 }
 .hero__inner { width: 100%; }
@@ -529,10 +530,15 @@ section { position: relative; padding: clamp(6rem, 10vw, 10rem) 0; }
 }
 .partners img {
   height: 44px; width: auto;
-  opacity: 0.5; filter: grayscale(1) brightness(1.6);
-  transition: opacity 0.6s var(--ease-out), filter 0.6s var(--ease-out), transform 0.6s var(--ease-spring);
+  opacity: 0.55; filter: grayscale(1) contrast(0) brightness(1.9);
+  transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-spring);
 }
-.partners img:hover { opacity: 1; filter: grayscale(0) brightness(1); transform: scale(1.06); }
+.partners img:hover { opacity: 1; transform: scale(1.06); }
+/* white-background JPEG logos: invert + screen-blend so the white box disappears */
+.partners img[src$=".jpg"] {
+  filter: grayscale(1) invert(0.92) contrast(1.15) brightness(1.3);
+  mix-blend-mode: screen;
+}
 
 /* ============================================================
    PAGE HERO (inner pages)
@@ -771,6 +777,9 @@ body.menu-open .menu__langs { opacity: 1; transform: translateY(0); }
   user-select: none;
 }
 .review__text { font-size: 0.94rem; color: var(--text-dim); flex: 1; }
+.review__foot {
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+}
 .review__name {
   font-family: var(--font-display); font-weight: 500; font-size: 0.95rem;
   display: flex; align-items: center; gap: 0.7rem;
@@ -778,6 +787,13 @@ body.menu-open .menu__langs { opacity: 1; transform: translateY(0); }
 .review__name::before {
   content: ""; width: 26px; height: 1px; background: var(--accent);
 }
+.review__logo {
+  height: 32px; width: auto; max-width: 110px; object-fit: contain;
+  /* collapse any logo color to a uniform light silhouette (dark theme) */
+  opacity: 0.6; filter: grayscale(1) contrast(0) brightness(1.9);
+  transition: opacity 0.6s var(--ease-out);
+}
+.review:hover .review__logo { opacity: 1; }
 .reviews__nav { display: flex; gap: 0.7rem; margin-top: 1.8rem; }
 .reviews__nav button {
   width: 46px; height: 46px; border-radius: 50%;
@@ -836,6 +852,22 @@ body.menu-open .menu__langs { opacity: 1; transform: translateY(0); }
   .stats { grid-template-columns: 1fr 1fr; }
   .hero__globe { display: none; }
   .nav .lang { display: none; }
+
+  /* --- mobile motion: cheap & stable --- */
+  /* blur() transitions shimmer on mobile GPUs; big filters and
+     full-screen keyframe animations drop frames — strip them all. */
+  .reveal {
+    transform: translateY(22px);
+    filter: none;
+    transition: opacity 0.65s var(--ease-out), transform 0.65s var(--ease-out);
+    transition-delay: var(--d, 0s);
+  }
+  .hero__bg img { animation: none; transform: scale(1.02); }
+  .orb { display: none; }
+  .grain { opacity: 0.035; }
+  .marquee__track { animation-duration: 30s; }
+  .hero__tag { backdrop-filter: none; -webkit-backdrop-filter: none; background: rgba(6,6,7,0.6); }
+  .svc__desc { max-height: none; opacity: 1; margin-top: 0.5rem; }
   .form__row { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; gap: 2.2rem; }
   .hero__scroll { display: none; }
