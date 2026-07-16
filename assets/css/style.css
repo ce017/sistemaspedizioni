@@ -173,6 +173,8 @@ body.menu-open .menu a span { transform: translateY(0); opacity: 1; }
 .menu a:nth-child(3) span { transition-delay: 0.20s; }
 .menu a:nth-child(4) span { transition-delay: 0.26s; }
 .menu a:nth-child(5) span { transition-delay: 0.32s; }
+.menu a:nth-child(6) span { transition-delay: 0.38s; }
+.menu a:nth-child(7) span { transition-delay: 0.44s; }
 .menu__meta {
   margin-top: 3rem; display: flex; gap: 2.5rem; flex-wrap: wrap;
   font-size: 0.85rem; color: var(--text-faint);
