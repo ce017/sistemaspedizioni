@@ -310,8 +310,8 @@ section { position: relative; padding: clamp(6rem, 10vw, 10rem) 0; }
 .hero__bg::after {
   content: ""; position: absolute; inset: 0;
   background:
-    radial-gradient(ellipse 62% 78% at 76% 42%, rgba(4,4,6,0.88) 30%, transparent 75%),
-    linear-gradient(to top, var(--bg) 4%, rgba(6,6,7,0.72) 38%, rgba(6,6,7,0.35) 65%, rgba(6,6,7,0.55) 100%);
+    radial-gradient(ellipse 58% 72% at 76% 42%, rgba(4,4,6,0.55) 30%, transparent 75%),
+    linear-gradient(to top, var(--bg) 2%, rgba(6,6,7,0.5) 34%, rgba(6,6,7,0.16) 65%, rgba(6,6,7,0.35) 100%);
 }
 .hero__inner { width: 100%; }
 .hero__tags { display: flex; gap: 0.6rem; flex-wrap: wrap; margin-bottom: 1.6rem; }
