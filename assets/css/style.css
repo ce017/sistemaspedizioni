@@ -576,6 +576,24 @@ section { position: relative; padding: clamp(6rem, 10vw, 10rem) 0; }
   border: 1px solid var(--line-strong); border-radius: 999px;
   padding: 0.35rem 0.85rem; color: var(--text-dim);
 }
+.svc-row__features {
+  grid-column: 1 / -1;
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 1rem; margin-top: 0.5rem;
+}
+.svc-feat {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 1.3rem;
+  padding: 1.4rem 1.5rem;
+  transition: border-color 0.6s var(--ease-out), background 0.6s var(--ease-out);
+}
+.svc-feat:hover { border-color: rgba(255,148,32,0.35); background: rgba(255,148,32,0.04); }
+.svc-feat strong {
+  display: block; font-family: var(--font-display); font-weight: 500;
+  font-size: 0.98rem; margin-bottom: 0.4rem;
+}
+.svc-feat p { font-size: 0.86rem; color: var(--text-dim); }
 
 /* ============================================================
    CONTACT
@@ -969,6 +987,7 @@ body.menu-open .menu__langs { opacity: 1; transform: translateY(0); }
   .bento__item, .bento__item--wide { grid-column: span 1; min-height: 300px; }
 
   .split, .contact-grid, .svc-row { grid-template-columns: 1fr; }
+  .svc-row__features { grid-template-columns: 1fr; }
   .svc-row:nth-child(even) .svc-row__media { order: 0; }
   .split__badge { left: 1rem; bottom: -1rem; transform: none; }
 

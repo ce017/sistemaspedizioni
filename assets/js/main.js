@@ -181,6 +181,12 @@
   /* ---------- quote form ---------- */
   var form = document.getElementById("quote-form");
   if (form) {
+    // arriving from a sector card (?settore=X) pre-fills the message
+    var sector = new URLSearchParams(window.location.search).get("settore");
+    if (sector) {
+      var msg = form.querySelector('[name="messaggio"]');
+      if (msg && !msg.value) msg.value = sector + " — ";
+    }
     form.addEventListener("submit", function (ev) {
       ev.preventDefault();
       var d = new FormData(form);
